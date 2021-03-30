@@ -1,4 +1,6 @@
-package com.rensilver.rscomputerclinic.model;
+package rensilver.rscomputerclinic.model;
+
+import rensilver.rscomputerclinic.enums.OrderStatus;
 
 import java.util.Date;
 
@@ -9,16 +11,21 @@ public class OrderTicket {
     private ComputerType computerType;
     private Owner owner;
     private String problemDescription;
+    private OrderStatus orderStatus;
+    private String solution;
 
     public OrderTicket() {
     }
 
-    public OrderTicket(Integer number, Date entryDate, ComputerType computerType, Owner owner, String problemDescription) {
+    public OrderTicket(Integer number, Date entryDate, ComputerType computerType
+            , Owner owner, String problemDescription, OrderStatus orderStatus, String solution) {
         this.number = number;
         this.entryDate = entryDate;
         this.computerType = computerType;
         this.owner = owner;
         this.problemDescription = problemDescription;
+        this.orderStatus = orderStatus;
+        this.solution = solution;
     }
 
     public Integer getNumber() {
@@ -59,5 +66,21 @@ public class OrderTicket {
 
     public void setProblemDescription(String problemDescription) {
         this.problemDescription = problemDescription;
+    }
+
+    public OrderStatus getOrderStatus() {
+        return orderStatus;
+    }
+
+    public void setOrderStatus(OrderStatus orderStatus) {
+        this.orderStatus = orderStatus;
+    }
+
+    public String getSolution() {
+        return solution;
+    }
+
+    public void setSolution(String solution) {
+        this.solution = solution;
     }
 }

@@ -1,4 +1,4 @@
-package com.rensilver.rscomputerclinic.model;
+package rensilver.rscomputerclinic.model;
 
 public class Person {
 
