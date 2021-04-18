@@ -9,6 +9,7 @@ public class OrderTicket {
     private Integer number;
     private Date entryDate;
     private ComputerType computerType;
+    private String computerHardwareDescription;
     private Owner owner;
     private String problemDescription;
     private OrderStatus orderStatus;
@@ -18,10 +19,12 @@ public class OrderTicket {
     }
 
     public OrderTicket(Integer number, Date entryDate, ComputerType computerType
-            , Owner owner, String problemDescription, OrderStatus orderStatus, String solution) {
+            , String computerHardwareDescription, Owner owner, String problemDescription
+            , OrderStatus orderStatus, String solution) {
         this.number = number;
         this.entryDate = entryDate;
         this.computerType = computerType;
+        this.computerHardwareDescription = computerHardwareDescription;
         this.owner = owner;
         this.problemDescription = problemDescription;
         this.orderStatus = orderStatus;
@@ -50,6 +53,14 @@ public class OrderTicket {
 
     public void setComputerType(ComputerType computerType) {
         this.computerType = computerType;
+    }
+
+    public String getComputerHardwareDescription() {
+        return computerHardwareDescription;
+    }
+
+    public void setComputerHardwareDescription(String computerHardwareDescription) {
+        this.computerHardwareDescription = computerHardwareDescription;
     }
 
     public Owner getOwner() {
